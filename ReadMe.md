@@ -1,28 +1,43 @@
-# The harmless ransom note
+# Harmless Ransom Note
 
-The harmless ransom note is simply a note made of words cut out from a magazine text, Imagine that a kidnapper wants to write a ransom note and he doesn't want it to be handwritten and be traced back to him so he got a magazine and cuts off a whole word and use them to create an untraceable replica of his ransom note.
+## Problem Statement
 
-Note that the words are case-sensitive and must use only whole words available in the magazine, you cannot use substrings or concatenation to create the words and cannot use repeat the words unless there is an available replica of the word.
+The "Harmless Ransom Note" problem involves determining whether a given ransom note can be constructed from the words available in a given magazine text. The note is composed by cutting out whole words from the magazine text. Each word in the magazine can only be used once in the ransom note. Note that the comparison is case-sensitive, which means 'Word' and 'word' would be considered different.
 
-```
-Example 1 :
-ransome_note = "this is a secret note for you from a secret admirer";
-magazine_text= "puerto rico is a great place you must hike far from "
-+"town to find a secret waterfall that i am an admirer of but note that"
-+" it is not as hard as it seems this is my advice for you"
-```
+Your task is to write a function that will return `true` if the ransom note can be constructed from the magazine; otherwise, it returns `false`.
 
-The harmless ransom note will return false because the word "secret" is used twice and it's found once in the magazine text.
+## Function Signature
 
-```
-Example 2 :
-ransome_note = "this is a note for you from a secret admirer";
-magazine_text= "puerto rico is a great place you must hike far from "
-+"town to find a secret waterfall that i am an admirer of but note that"
-+" it is not as hard as it seems this is my advice for you"
+```java
+public boolean harmlessRansomNote(String ransomNote, String magazine): boolean
 ```
 
-The harmless ransom note will return ture because the word "secret" is used once and it's found once in the magazine text.
+### Parameters
 
-## Submission
-Push your changes to GitHub
+- `ransomNote`: A string representing the ransom note to be constructed.
+- `magazine`: A string representing the text of the magazine.
+
+### Return
+
+- Returns `boolean`: `true` if the ransom note can be constructed from the magazine text, otherwise `false`.
+
+## Examples
+
+### Example 1:
+
+**Input**: ransomNote = "this is a secret note for you from a secret admirer", magazine = "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice for you"
+
+**Output**: `false`
+
+**Explanation**: The word "secret" is used twice in the ransom note but is found only once in the magazine text.
+
+### Example 2:
+
+**Input**: ransomNote = "this is a note for you from a secret admirer", magazine = "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice for you"
+
+**Output**: `true`
+
+**Explanation**: All words in the ransom note can be found in the magazine text.
+
+
+
